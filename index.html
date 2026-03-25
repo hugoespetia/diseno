@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infografía: Attention Is All You Need</title>
+    <title>Infografía: Attention Is All You Need - Hugo Espetia</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -45,23 +45,60 @@
             font-weight: bold;
             color: #1e293b;
         }
+
+        .logo-placeholder {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px dashed rgba(255, 255, 255, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.7rem;
+            text-align: center;
+            padding: 4px;
+        }
     </style>
 </head>
 <body class="text-slate-800">
 
-    <!-- Header -->
-    <header class="gradient-bg text-white py-12 px-6 text-center border-b-4 border-blue-500">
-        <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Attention Is All You Need</h1>
-        <p class="text-xl text-blue-300 max-w-2xl mx-auto italic">"La arquitectura que cambió el procesamiento del lenguaje natural para siempre."</p>
-        <div class="mt-6 flex justify-center gap-4 text-sm font-medium">
-            <span class="bg-blue-600/30 px-3 py-1 rounded-full border border-blue-400/50">NIPS 2017</span>
-            <span class="bg-blue-600/30 px-3 py-1 rounded-full border border-blue-400/50">Google Brain / Research</span>
+    <!-- Header con Información Institucional -->
+    <header class="gradient-bg text-white py-10 px-6 border-b-4 border-blue-500">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <!-- Logos -->
+            <div class="flex gap-4">
+                <div class="w-24 h-24 rounded-lg overflow-hidden bg-white p-2 flex items-center justify-center">
+                    <!-- Reemplazar src con el logo de la Universidad Continental -->
+                    <img src="https://ucontinental.edu.pe/wp-content/uploads/2019/11/logo-uc-v.png" alt="Logo Universidad Continental" class="max-w-full max-h-full object-contain" onerror="this.parentElement.innerHTML='<span class=\"text-slate-400 text-[10px] font-bold text-center\">UNIVERSIDAD<br>CONTINENTAL</span>'">
+                </div>
+                <div class="w-24 h-24 rounded-lg overflow-hidden bg-white p-2 flex items-center justify-center">
+                    <!-- Logo Ingeniería de Sistemas -->
+                    <img src="https://ucontinental.edu.pe/f-ingenieria/wp-content/uploads/sites/11/2018/12/sistemas.png" alt="Logo Ingeniería de Sistemas" class="max-w-full max-h-full object-contain" onerror="this.parentElement.innerHTML='<span class=\"text-slate-400 text-[10px] font-bold text-center\">ING. SISTEMAS<br>E INFORMÁTICA</span>'">
+                </div>
+            </div>
+
+            <!-- Título y Autor -->
+            <div class="text-center flex-1">
+                <h1 class="text-3xl md:text-5xl font-extrabold mb-2">Attention Is All You Need</h1>
+                <p class="text-lg text-blue-300 italic mb-4">"La arquitectura que cambió el procesamiento del lenguaje natural para siempre"</p>
+                <div class="inline-block bg-blue-600/20 px-4 py-2 rounded-lg border border-blue-400/30">
+                    <p class="text-sm uppercase tracking-wider text-blue-200 font-semibold">Autor / Expositor</p>
+                    <p class="text-xl font-bold">Hugo Espetia Huamanga</p>
+                    <p class="text-xs text-blue-300">Docente - Universidad Continental</p>
+                </div>
+            </div>
+
+            <!-- Detalles del Paper -->
+            <div class="flex flex-col gap-2 text-right hidden md:flex">
+                <span class="bg-slate-700/50 px-3 py-1 rounded text-xs border border-slate-600">NIPS 2017</span>
+                <span class="bg-slate-700/50 px-3 py-1 rounded text-xs border border-slate-600">Google Research</span>
+                <span class="bg-slate-700/50 px-3 py-1 rounded text-xs border border-slate-600">Arquitectura Transformer</span>
+            </div>
         </div>
     </header>
 
     <main class="max-w-6xl mx-auto p-6 md:p-10 space-y-12">
         
-        <!-- Concepto Central -->
+        <!-- Introducción -->
         <section class="grid md:grid-cols-2 gap-8 items-center">
             <div>
                 <h2 class="text-3xl font-bold mb-4 text-slate-900 flex items-center gap-2">
@@ -73,17 +110,17 @@
                 <div class="mt-6 space-y-3">
                     <div class="flex items-start gap-3">
                         <div class="mt-1 bg-green-100 p-1 rounded-full text-green-600"><i class="fas fa-check text-xs"></i></div>
-                        <p><span class="font-bold">Paralelización:</span> A diferencia de las RNN, puede procesar secuencias completas a la vez.</p>
+                        <p><span class="font-bold">Paralelización:</span> Puede procesar secuencias completas simultáneamente.</p>
                     </div>
                     <div class="flex items-start gap-3">
                         <div class="mt-1 bg-green-100 p-1 rounded-full text-green-600"><i class="fas fa-check text-xs"></i></div>
-                        <p><span class="font-bold">Eficiencia:</span> Requiere significativamente menos tiempo de entrenamiento.</p>
+                        <p><span class="font-bold">Eficiencia:</span> Reduce drásticamente el tiempo de entrenamiento en comparación con las RNN.</p>
                     </div>
                 </div>
             </div>
             <div class="bg-white p-8 rounded-2xl shadow-xl border border-slate-100 text-center">
                 <div class="relative inline-block">
-                    <!-- SVG Simplificado del Transformer -->
+                    <!-- SVG del Transformer -->
                     <svg width="240" height="200" viewBox="0 0 240 200" class="mx-auto">
                         <rect x="10" y="10" width="100" height="180" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
                         <text x="60" y="105" text-anchor="middle" fill="#1e40af" font-weight="bold">Encoder</text>
@@ -99,7 +136,7 @@
                         </defs>
                     </svg>
                 </div>
-                <p class="text-sm text-slate-400 mt-4">Estructura simplificada Encoder-Decoder</p>
+                <p class="text-sm text-slate-400 mt-4">Estructura fundamental Encoder-Decoder</p>
             </div>
         </section>
 
@@ -112,7 +149,7 @@
                 <div class="card bg-white p-6 rounded-xl shadow-sm border border-slate-200">
                     <div class="text-blue-600 mb-4 text-2xl"><i class="fas fa-calculator"></i></div>
                     <h3 class="font-bold text-lg mb-2">Scaled Dot-Product</h3>
-                    <p class="text-sm text-slate-600 mb-4">Calcula la relevancia de cada palabra respecto a las demás usando tres vectores: Queries (Q), Keys (K) y Values (V).</p>
+                    <p class="text-sm text-slate-600 mb-4">Mide la correlación entre palabras usando vectores: Queries (Q), Keys (K) y Values (V).</p>
                     <div class="math-block text-center text-xs">
                         Attention(Q,K,V) = softmax(QKᵀ / √dₖ)V
                     </div>
@@ -122,7 +159,7 @@
                 <div class="card bg-white p-6 rounded-xl shadow-sm border border-slate-200">
                     <div class="text-purple-600 mb-4 text-2xl"><i class="fas fa-layer-group"></i></div>
                     <h3 class="font-bold text-lg mb-2">Multi-Head Attention</h3>
-                    <p class="text-sm text-slate-600 mb-4">Permite al modelo atender simultáneamente a información de diferentes subespacios de representación en distintas posiciones.</p>
+                    <p class="text-sm text-slate-600 mb-4">Ejecuta múltiples mecanismos de atención en paralelo para capturar diferentes relaciones semánticas.</p>
                     <div class="flex justify-center gap-1">
                         <span class="w-3 h-3 bg-purple-400 rounded-full attention-node"></span>
                         <span class="w-3 h-3 bg-purple-500 rounded-full attention-node" style="animation-delay: 0.3s"></span>
@@ -134,64 +171,60 @@
                 <div class="card bg-white p-6 rounded-xl shadow-sm border border-slate-200">
                     <div class="text-orange-600 mb-4 text-2xl"><i class="fas fa-map-marker-alt"></i></div>
                     <h3 class="font-bold text-lg mb-2">Positional Encoding</h3>
-                    <p class="text-sm text-slate-600">Como no hay recurrencia, se inyecta información sobre el orden relativo de las palabras usando funciones seno y coseno.</p>
+                    <p class="text-sm text-slate-600">Añade información de posición mediante funciones sinusoidales para compensar la falta de orden secuencial.</p>
                 </div>
             </div>
         </section>
 
         <!-- Arquitectura Detallada -->
         <section>
-            <h2 class="text-3xl font-bold mb-8 text-slate-900">Arquitectura del Modelo</h2>
+            <h2 class="text-3xl font-bold mb-8 text-slate-900">Especificaciones Técnicas</h2>
             <div class="grid md:grid-cols-2 gap-10">
                 <div class="space-y-6">
                     <div class="flex gap-4">
-                        <div class="bg-blue-600 text-white w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 font-bold">1</div>
+                        <div class="bg-blue-600 text-white w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 font-bold">6</div>
                         <div>
-                            <h4 class="font-bold text-xl">Encoder (Izquierda)</h4>
-                            <p class="text-slate-600">Compuesto por un stack de 6 capas idénticas. Cada capa tiene dos subcapas: Multi-head attention y una red Feed-Forward simple por posición.</p>
+                            <h4 class="font-bold text-xl">Capas en el Encoder</h4>
+                            <p class="text-slate-600">Cada capa tiene una subcapa de atención y una red de alimentación hacia adelante (Feed-Forward).</p>
                         </div>
                     </div>
                     <div class="flex gap-4">
-                        <div class="bg-yellow-500 text-white w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 font-bold">2</div>
+                        <div class="bg-yellow-500 text-white w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 font-bold">6</div>
                         <div>
-                            <h4 class="font-bold text-xl">Decoder (Derecha)</h4>
-                            <p class="text-slate-600">También de 6 capas. Incluye una tercera subcapa que realiza atención sobre la salida del Encoder para guiar la generación.</p>
+                            <h4 class="font-bold text-xl">Capas en el Decoder</h4>
+                            <p class="text-slate-600">Incluye una subcapa adicional que atiende a la salida del codificador (Encoder-Decoder Attention).</p>
                         </div>
                     </div>
                     <div class="flex gap-4">
-                        <div class="bg-green-500 text-white w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 font-bold">3</div>
+                        <div class="bg-green-500 text-white w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 font-bold">N</div>
                         <div>
-                            <h4 class="font-bold text-xl">Conexiones Residuales</h4>
-                            <p class="text-slate-600">Cada subcapa emplea una conexión residual seguida de Normalización de Capa (Layer Normalization).</p>
+                            <h4 class="font-bold text-xl">Layer Normalization</h4>
+                            <p class="text-slate-600">Uso crítico de conexiones residuales y normalización después de cada subcapa.</p>
                         </div>
                     </div>
                 </div>
-                <div class="bg-slate-900 rounded-2xl p-6 text-white overflow-hidden relative">
-                    <h4 class="text-blue-400 font-mono mb-4">// Resumen Técnico</h4>
+                <div class="bg-slate-900 rounded-2xl p-8 text-white relative">
+                    <h4 class="text-blue-400 font-mono mb-4">// Hiperparámetros Base</h4>
                     <ul class="space-y-4 font-mono text-sm">
                         <li class="flex justify-between border-b border-slate-700 pb-2">
-                            <span>Dimensión del Modelo (d_model)</span>
+                            <span>Dimensión (d_model)</span>
                             <span class="text-yellow-400">512</span>
-                        </li>
-                        <li class="flex justify-between border-b border-slate-700 pb-2">
-                            <span>Capas (N)</span>
-                            <span class="text-yellow-400">6</span>
                         </li>
                         <li class="flex justify-between border-b border-slate-700 pb-2">
                             <span>Cabezas de Atención (h)</span>
                             <span class="text-yellow-400">8</span>
                         </li>
                         <li class="flex justify-between border-b border-slate-700 pb-2">
-                            <span>Dimensión Feed-Forward</span>
+                            <span>Dimensión FFN (d_ff)</span>
                             <span class="text-yellow-400">2048</span>
                         </li>
                         <li class="flex justify-between">
-                            <span>Dropout</span>
-                            <span class="text-yellow-400">0.1</span>
+                            <span>Parámetros totales</span>
+                            <span class="text-yellow-400">~65M</span>
                         </li>
                     </ul>
-                    <div class="absolute -bottom-4 -right-4 opacity-10 text-8xl">
-                        <i class="fas fa-microchip"></i>
+                    <div class="mt-8 pt-6 border-t border-slate-700 text-slate-500 text-xs">
+                        Presentado por Hugo Espetia Huamanga para la Escuela de Ingeniería de Sistemas.
                     </div>
                 </div>
             </div>
@@ -199,32 +232,52 @@
 
         <!-- Resultados -->
         <section class="text-center bg-white border border-slate-200 rounded-3xl p-10 shadow-sm">
-            <h2 class="text-3xl font-bold mb-6 text-slate-900">Hitos y Resultados</h2>
+            <h2 class="text-3xl font-bold mb-6 text-slate-900">Métricas de Rendimiento</h2>
             <div class="grid md:grid-cols-3 gap-8">
                 <div>
                     <div class="text-4xl font-extrabold text-blue-600 mb-2">28.4</div>
-                    <p class="font-bold">Puntuación BLEU</p>
-                    <p class="text-sm text-slate-500">En traducción Inglés-Alemán (WMT 2014), superando el estado del arte previo por 2.0 puntos.</p>
+                    <p class="font-bold">Score BLEU</p>
+                    <p class="text-sm text-slate-500">Superando el SOTA en traducción En-De con un entrenamiento mucho más eficiente.</p>
                 </div>
                 <div>
-                    <div class="text-4xl font-extrabold text-blue-600 mb-2">3.5 Días</div>
-                    <p class="font-bold">Tiempo de Entrenamiento</p>
-                    <p class="text-sm text-slate-500">Usando 8 GPUs NVIDIA P100, una fracción del costo de modelos anteriores.</p>
+                    <div class="text-4xl font-extrabold text-blue-600 mb-2">8 GPUs</div>
+                    <p class="font-bold">Hardware de Entrenamiento</p>
+                    <p class="text-sm text-slate-500">Entrenado durante solo 3.5 días en comparación con semanas de modelos RNN.</p>
                 </div>
                 <div>
                     <div class="text-4xl font-extrabold text-blue-600 mb-2">SOTA</div>
-                    <p class="font-bold">Traducción Inglés-Francés</p>
-                    <p class="text-sm text-slate-500">Logró 41.0 BLEU, estableciendo un nuevo récord en el momento de su publicación.</p>
+                    <p class="font-bold">Estado del Arte</p>
+                    <p class="text-sm text-slate-500">Estableció el estándar para casi todos los modelos de lenguaje modernos (GPT, BERT, T5).</p>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-slate-100 py-8 px-6 text-center text-slate-500 text-sm">
-        <p>Infografía basada en el paper: <strong>Vaswani, A., et al. (2017) "Attention Is All You Need"</strong></p>
-        <p class="mt-2">Creado para el análisis de modelos de lenguaje avanzados.</p>
+    <!-- Footer Institucional -->
+    <footer class="bg-slate-900 text-slate-400 py-12 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+            <div>
+                <p class="text-lg font-bold text-white">Hugo Espetia Huamanga</p>
+                <p>Docente de la Universidad Continental</p>
+                <p>Facultad de Ingeniería</p>
+                <p class="text-sm mt-2 text-slate-500">Escuela Profesional de Ingeniería de Sistemas e Informática</p>
+            </div>
+            <div class="text-right">
+                <p class="text-xs uppercase tracking-widest text-slate-500 mb-4 text-center md:text-right">Instituciones</p>
+                <div class="flex justify-center md:justify-end gap-6">
+                    <!-- Universidad Continental -->
+                    <div class="h-12 w-32 bg-white/10 rounded border border-white/20 flex items-center justify-center p-2">
+                         <span class="text-[8px] text-center font-bold text-white uppercase">Universidad<br>Continental</span>
+                    </div>
+                    <!-- EPISI -->
+                    <div class="h-12 w-32 bg-white/10 rounded border border-white/20 flex items-center justify-center p-2">
+                         <span class="text-[8px] text-center font-bold text-white uppercase">Ingeniería de<br>Sistemas</span>
+                    </div>
+                </div>
+                <p class="mt-6 text-xs italic">Basado en Vaswani et al. (2017) - "Attention Is All You Need"</p>
+            </div>
+        </div>
     </footer>
 
 </body>
